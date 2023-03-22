@@ -26,16 +26,16 @@ df.describe()
 df.duplicated().sum()
 
 df.isnull().sum()
-#mode
+#Mode
 df['show_name'] = df["show_name"].fillna(df['show_name'].mode()[0])
 df['country']=df["country"].fillna(df['country'].mode()[0])
-#mean
+#Mean
 df['num_episodes'] = df["num_episodes"].fillna(df['num_episodes'].mean())
-#median
+#Median
 df['rating'] = df["rating"].fillna(df['rating'].median())
 df['current_overall_rank'] = df["current_overall_rank"].fillna(df['current_overall_rank'].median())
 df['watchers'] = df["watchers"].fillna(df['watchers'].median())
-#mode
+#Mode
 df['aired_on']=df["aired_on"].fillna(df['aired_on'].mode()[0])
 #fillna
 df['original_network']=df["original_network"].fillna(df['original_network'].mode()[0])
